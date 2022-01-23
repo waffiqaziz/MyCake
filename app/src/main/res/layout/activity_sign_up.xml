@@ -4,8 +4,8 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".RegisterActivity"
-  android:background="@color/black_bg">
+  android:background="@color/black_bg"
+  tools:context=".SignUpActivity">
 
   <LinearLayout
     android:layout_width="match_parent"
@@ -23,16 +23,16 @@
       android:layout_marginTop="16dp"
       android:fontFamily="@font/bold"
       android:gravity="left"
-      android:text="Create your\naccount"
+      android:text="@string/create_your_account"
       android:textColor="@color/white"
-      app:autoSizeTextType="uniform" />
+      app:autoSizeTextType="uniform"
+      tools:ignore="RtlHardcoded" />
 
     <EditText
       android:id="@+id/et_full_name"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
-      android:autofillHints="Fullname"
+      android:autofillHints="full name"
       android:background="@drawable/input_field"
       android:fontFamily="@font/regular"
       android:hint="@string/fullname"
@@ -45,12 +45,13 @@
       android:id="@+id/et_username"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="10dp"
       android:autofillHints="username"
       android:background="@drawable/input_field"
       android:fontFamily="@font/regular"
       android:hint="@string/username"
       android:inputType="text"
+      android:maxLength="15"
       android:minHeight="48dp"
       android:textColor="@color/white"
       android:textColorHint="@color/white" />
@@ -59,7 +60,7 @@
       android:id="@+id/et_email"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="10dp"
       android:autofillHints="email"
       android:background="@drawable/input_field"
       android:fontFamily="@font/regular"
@@ -69,11 +70,46 @@
       android:textColor="@color/white"
       android:textColorHint="@color/white" />
 
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <com.hbb20.CountryCodePicker
+        android:id="@+id/code_country"
+        android:layout_width="110dp"
+        android:layout_marginEnd="5dp"
+        android:layout_height="48sp"
+        android:layout_gravity="left"
+        android:background="@drawable/input_phone_number"
+        android:gravity="center"
+        app:ccp_textSize="13sp"
+        app:ccp_arrowColor="@color/white"
+        app:ccp_contentColor="@color/white"
+        tools:ignore="RtlHardcoded" />
+
+      <EditText
+        android:id="@+id/et_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_field"
+        android:fontFamily="@font/regular"
+        android:hint="@string/phone_number"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:autofillHints="phone number"
+        tools:ignore="TextFields" />
+
+    </LinearLayout>
+
     <EditText
       android:id="@+id/et_password"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="10dp"
       android:autofillHints="password"
       android:background="@drawable/input_field"
       android:fontFamily="@font/regular"
@@ -87,8 +123,8 @@
       android:id="@+id/et_confirm_password"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="20dp"
-      android:autofillHints="email"
+      android:layout_marginTop="10dp"
+      android:autofillHints="confirm password"
       android:background="@drawable/input_field"
       android:fontFamily="@font/regular"
       android:hint="@string/confirm_password"
@@ -105,25 +141,27 @@
       android:orientation="horizontal">
 
       <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_create"
         android:layout_width="140dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48sp"
         android:background="@drawable/button"
         android:fontFamily="@font/bold"
-        android:text="Create"
+        android:text="@string/create"
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold" />
 
       <TextView
+        android:id="@+id/tv_need_help"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="@font/regular"
         android:gravity="right"
-        android:text="Need Help?"
+        android:text="@string/need_help"
         android:textColor="@color/yellow"
-        android:textSize="22sp" />
+        android:textSize="22sp"
+        tools:ignore="RtlHardcoded" />
 
     </LinearLayout>
 
@@ -138,18 +176,19 @@
     <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginLeft="40dp"
+      android:layout_marginStart="40dp"
       android:layout_marginBottom="35dp"
       android:fontFamily="@font/regular"
       android:gravity="bottom"
-      android:text="Have account? "
+      android:text="@string/have_account"
       android:textColor="@color/white"
       android:textSize="18sp" />
 
     <TextView
-      android:id="@+id/tv_register"
+      android:id="@+id/tv_login"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_marginStart="5dp"
       android:layout_marginBottom="35dp"
       android:fontFamily="@font/bold"
       android:gravity="bottom"
@@ -158,11 +197,6 @@
       android:textSize="18sp" />
 
   </LinearLayout>
-
-
-
-
-
 
 
 </RelativeLayout>

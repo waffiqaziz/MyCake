@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "442944844250",
+    "project_id": "mycake-c1bdf",
+    "storage_bucket": "mycake-c1bdf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:442944844250:android:edfb487870e89c16a510e3",
+        "android_client_info": {
+          "package_name": "com.example.mycake"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "442944844250-prp7o8ih08da7km8o4h58k0j2a43r64c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVACz-c-xQ4Kd9u3Kvf-u19kVYney1Nbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "442944844250-prp7o8ih08da7km8o4h58k0j2a43r64c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

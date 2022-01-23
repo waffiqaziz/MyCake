@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/background_user_profile"
+  tools:context=".UserProfileActivity">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="UselessParent">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="255dp"
+      android:orientation="vertical"
+      android:padding="20dp">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+          android:id="@+id/imageView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/icon_back"
+          android:src="@drawable/ic_icon_arrow"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          tools:ignore="MissingConstraints" />
+
+        <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/bold"
+          android:gravity="center"
+          android:text="@string/my_profile"
+          android:textColor="@color/white"
+          android:textSize="28sp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toStartOf="@+id/logOut"
+          app:layout_constraintStart_toEndOf="@+id/imageView"
+          app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+          android:id="@+id/logOut"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:contentDescription="@string/icon_log_out"
+          android:src="@drawable/ic_icon_logout"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="129.31dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="-10dp"
+        android:contentDescription="@string/profile_picture"
+        android:src="@drawable/ic_profile_image" />
+
+      <TextView
+        android:id="@+id/fullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:text="@string/platinum_member"
+        android:textColor="@color/gray"
+        android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="5dp"
+      android:layout_marginRight="5dp"
+      android:background="@drawable/frag_user_profile">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <!-- Menu Profile -->
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RelativeOverlap,UseCompoundDrawables">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:contentDescription="@string/edit_profile"
+              android:src="@drawable/ic_icon_user_black" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="24dp"
+              android:fontFamily="@font/bold"
+              android:text="@string/edit_profile"
+              android:textColor="@color/black_bg"
+              android:textSize="23sp" />
+          </LinearLayout>
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/edit_profile"
+            android:src="@drawable/ic_icon_angle" />
+        </RelativeLayout>
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:contentDescription="@string/divider"
+          android:src="@drawable/ic_line" />
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RelativeOverlap,UseCompoundDrawables">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:contentDescription="@string/wishlist"
+              android:src="@drawable/ic_icon_heart" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="24dp"
+              android:fontFamily="@font/bold"
+              android:text="@string/wishlist"
+              android:textColor="@color/black_bg"
+              android:textSize="23sp" />
+          </LinearLayout>
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/wishlist"
+            android:src="@drawable/ic_icon_angle" />
+        </RelativeLayout>
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:contentDescription="@string/divider"
+          android:src="@drawable/ic_line" />
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RelativeOverlap,UseCompoundDrawables">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:contentDescription="@string/order_history"
+              android:src="@drawable/ic_icon_history" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="24dp"
+              android:fontFamily="@font/bold"
+              android:text="@string/order_history"
+              android:textColor="@color/black_bg"
+              android:textSize="23sp" />
+          </LinearLayout>
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/order_history"
+            android:src="@drawable/ic_icon_angle" />
+        </RelativeLayout>
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:contentDescription="@string/divider"
+          android:src="@drawable/ic_line" />
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RelativeOverlap,UseCompoundDrawables">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:contentDescription="@string/help_center"
+              android:src="@drawable/ic_icon_help_circle" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="24dp"
+              android:fontFamily="@font/bold"
+              android:text="@string/help_center"
+              android:textColor="@color/black_bg"
+              android:textSize="23sp" />
+          </LinearLayout>
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/help_center"
+            android:src="@drawable/ic_icon_angle" />
+        </RelativeLayout>
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="20dp"
+          android:layout_marginBottom="20dp"
+          android:contentDescription="@string/divider"
+          android:src="@drawable/ic_line" />
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="RelativeOverlap,UseCompoundDrawables">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:contentDescription="@string/settings"
+              android:src="@drawable/ic_icon_settings" />
+
+            <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="24dp"
+              android:fontFamily="@font/bold"
+              android:text="@string/settings"
+              android:textColor="@color/black_bg"
+              android:textSize="23sp" />
+          </LinearLayout>
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/settings"
+            android:src="@drawable/ic_icon_angle" />
+        </RelativeLayout>
+
+      </LinearLayout>
+
+    </LinearLayout>
+  </LinearLayout>
+
+
+</RelativeLayout>
