@@ -79,20 +79,21 @@
       <com.hbb20.CountryCodePicker
         android:id="@+id/code_country"
         android:layout_width="110dp"
-        android:layout_marginEnd="5dp"
         android:layout_height="48sp"
         android:layout_gravity="left"
+        android:layout_marginEnd="5dp"
         android:background="@drawable/input_phone_number"
         android:gravity="center"
-        app:ccp_textSize="13sp"
         app:ccp_arrowColor="@color/white"
         app:ccp_contentColor="@color/white"
+        app:ccp_textSize="13sp"
         tools:ignore="RtlHardcoded" />
 
       <EditText
         android:id="@+id/et_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:autofillHints="phone number"
         android:background="@drawable/input_field"
         android:fontFamily="@font/regular"
         android:hint="@string/phone_number"
@@ -100,7 +101,6 @@
         android:minHeight="48dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
-        android:autofillHints="phone number"
         tools:ignore="TextFields" />
 
     </LinearLayout>
@@ -137,7 +137,6 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="20dp"
-      android:layout_marginBottom="50dp"
       android:orientation="horizontal">
 
       <androidx.appcompat.widget.AppCompatButton
@@ -165,6 +164,15 @@
 
     </LinearLayout>
 
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Sign up with Google"
+      android:textColor="@color/white"
+      android:fontFamily="@font/regular"
+      android:layout_marginTop="20dp"
+      android:layout_marginBottom="50dp"
+      android:textSize="15sp"/>
   </LinearLayout>
 
   <LinearLayout

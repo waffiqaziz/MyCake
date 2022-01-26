@@ -162,14 +162,14 @@
           android:layout_marginTop="20dp"/>
 
         <EditText
-          android:id="@+id/et_password"
+          android:id="@+id/et_password_update"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:autofillHints="password"
           android:background="@drawable/input_field_edit"
           android:fontFamily="@font/regular"
           android:hint="@string/password"
-          android:inputType="textPassword"
+          android:inputType="text"
           android:textSize="20sp"
           android:minHeight="45dp"
           android:textColor="@color/black_bg"
@@ -200,7 +200,7 @@
           android:textColorHint="@color/black_bg" />
 
         <androidx.appcompat.widget.AppCompatButton
-          android:id="@+id/btn_login"
+          android:id="@+id/btn_update"
           android:layout_width="140dp"
           android:layout_height="wrap_content"
           android:background="@drawable/button"

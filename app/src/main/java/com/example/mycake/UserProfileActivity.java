@@ -45,6 +45,7 @@ public class UserProfileActivity extends AppCompatActivity {
       Intent intent = new Intent(getApplicationContext(), UserEditActivity.class);
 
       intent.putExtra("fullName", fullName);
+      intent.putExtra("username", username);
       intent.putExtra("email", email);
       intent.putExtra("password", password);
       intent.putExtra("phoneNumber", phoneNumber);
