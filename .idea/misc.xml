@@ -4,18 +4,24 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/button.xml" value="0.2078125" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_icon_profile.xml" value="0.18153153153153154" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_icon_settings.xml" value="0.18153153153153154" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_icon_truck.xml" value="0.13963963963963963" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_profile_image.xml" value="0.18153153153153154" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_profile_picture.xml" value="0.22552083333333334" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/input_field.xml" value="0.2078125" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/input_field_edit.xml" value="0.19504504504504505" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/input_field_error.xml" value="0.22552083333333334" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/input_phone_number.xml" value="0.18697916666666667" />
-        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_login_success.xml" value="0.20471014492753623" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_main.xml" value="0.12409420289855072" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_show_input_login.xml" value="0.1539855072463768" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_sign_up.xml" value="0.18" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_splash.xml" value="0.22" />
-        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_user_profile.xml" value="0.17" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_user_edit.xml" value="0.18" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_user_profile.xml" value="0.22" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
       </map>
     </option>

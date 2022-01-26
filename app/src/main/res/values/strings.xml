@@ -19,7 +19,7 @@
   <string name="welcome">Welcome!</string>
   <string name="phone_number">Phone number</string>
   <string name="email">Email</string>
-<!--  <string name="emailPattern">[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+</string>-->
+  <!--  <string name="emailPattern">[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+</string>-->
   <string name="whiteSpaces">(?=\\s+$)</string>
   <string name="back_button">back button</string>
   <string name="my_profile">My Profile</string>
@@ -34,4 +34,8 @@
   <string name="settings">Settings</string>
   <string name="help_center">Help Center</string>
   <string name="divider">Divider</string>
+  <string name="message">message</string>
+  <string name="home_menu">home menu</string>
+  <string name="packaging">packaging</string>
+  <string name="update">Update</string>
 </resources>

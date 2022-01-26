@@ -9,11 +9,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.FirebaseError;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.hbb20.CountryCodePicker;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -43,24 +49,24 @@ public class SignUpActivity extends AppCompatActivity {
   }
 
   private void initView() {
-    btnSignUp   = findViewById(R.id.btn_create);
-    tvLogin     = findViewById(R.id.tv_login);
-    tvNeedHelp  = findViewById(R.id.tv_need_help);
-    etFullName  = findViewById(R.id.et_full_name);
-    etUsername  = findViewById(R.id.et_username);
-    etEmail     = findViewById(R.id.et_email);
-    pickCode    = findViewById(R.id.code_country);
-    etPhone     = findViewById(R.id.et_number);
-    etPassword  = findViewById(R.id.et_password);
+    btnSignUp = findViewById(R.id.btn_create);
+    tvLogin = findViewById(R.id.tv_login);
+    tvNeedHelp = findViewById(R.id.tv_need_help);
+    etFullName = findViewById(R.id.et_full_name);
+    etUsername = findViewById(R.id.et_username);
+    etEmail = findViewById(R.id.et_email);
+    pickCode = findViewById(R.id.code_country);
+    etPhone = findViewById(R.id.et_number);
+    etPassword = findViewById(R.id.et_password);
     etPassword2 = findViewById(R.id.et_confirm_password);
   }
 
   private void getData() {
-    fullName    = etFullName.getText().toString();
-    username    = etUsername.getText().toString();
-    email       = etEmail.getText().toString();
-    password    = etPassword.getText().toString();
-    password2   = etPassword2.getText().toString();
+    fullName = etFullName.getText().toString();
+    username = etUsername.getText().toString();
+    email = etEmail.getText().toString();
+    password = etPassword.getText().toString();
+    password2 = etPassword2.getText().toString();
     phoneNumber = etPhone.getText().toString();
     codeCountry = pickCode.getSelectedCountryCodeWithPlus();
   }
@@ -74,7 +80,9 @@ public class SignUpActivity extends AppCompatActivity {
 
       //check input
       if (!validateInput()) return;
-      else {
+      else if (1==1) {
+
+      } else{
         //showOnDialog()
 
         // Send data to firebase
@@ -91,32 +99,55 @@ public class SignUpActivity extends AppCompatActivity {
     });
   }
 
+  private void isUsernameHasBeenTaken() {
+    String linkFirebase = "https://mycake-c1bdf-default-rtdb.asia-southeast1.firebasedatabase.app";
+
+    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
+    reference.addListenerForSingleValueEvent(new ValueEventListener() {
+      @Override
+      public void onDataChange(DataSnapshot dataSnapshot) {
+        for(DataSnapshot data: dataSnapshot.getChildren()){
+          if (data.child(username).exists()) {
+            //do ur stuff
+          } else {
+            //do something if not exists
+          }
+        }
+      }
+
+      @Override
+      public void onCancelled(@NonNull DatabaseError error) {
+
+      }
+    });
+  }
+
   private void openLoginView() {
     Intent intent = new Intent(this, LoginActivity.class);
     startActivity(intent);
   }
 
-  private boolean validateFullName(){
-    if(fullName.matches("")) {
+  private boolean validateFullName() {
+    if (fullName.matches("")) {
       etFullName.setBackgroundResource(R.drawable.input_field_error);
       etFullName.setError("This field cannot be blank");
       return false;
-    }else {
+    } else {
       etFullName.setBackgroundResource(R.drawable.input_field);
       return true;
     }
   }
 
-  private boolean validateUsername(){
-    if(username.matches("")) {
+  private boolean validateUsername() {
+    if (username.matches("")) {
       etUsername.setBackgroundResource(R.drawable.input_field_error);
       etUsername.setError("This field cannot be blank");
       return false;
-    } else if(username.length() >= 15) {
+    } else if (username.length() >= 15) {
       etUsername.setBackgroundResource(R.drawable.input_field_error);
       etUsername.setError("Max length 15 character");
       return false;
-    } else if(username.matches(String.valueOf(R.string.whiteSpaces))) {
+    } else if (username.matches(String.valueOf(R.string.whiteSpaces))) {
       etUsername.setBackgroundResource(R.drawable.input_field_error);
       etUsername.setError("White spaces not allowed");
       return false;
@@ -126,17 +157,17 @@ public class SignUpActivity extends AppCompatActivity {
     }
   }
 
-  private boolean validateEmail(){
-    if(email.matches("")) {
+  private boolean validateEmail() {
+    if (email.matches("")) {
       etEmail.setBackgroundResource(R.drawable.input_field_error);
       etEmail.setError("This field cannot be blank");
       return false;
 //    } else if(!email.matches(getString(R.string.emailPattern))) {
-    } else if(!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+    } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
       etEmail.setBackgroundResource(R.drawable.input_field_error);
       etEmail.setError("Invalid email address");
       return false;
-    } else if(email.matches(getString(R.string.whiteSpaces))) {
+    } else if (email.matches(getString(R.string.whiteSpaces))) {
       etEmail.setBackgroundResource(R.drawable.input_field_error);
       etEmail.setError("White spaces not allowed");
       return false;
@@ -146,17 +177,17 @@ public class SignUpActivity extends AppCompatActivity {
     }
   }
 
-  private boolean validatePassword(){
+  private boolean validatePassword() {
     String passwordPattern = "^(?=.*[0-9])"
-                            + "(?=.*[a-z])(?=.*[A-Z])"
-                            + "(?=.*[@#$%^&+=])"
-                            + "(?=\\S+$).{8,20}$";
+      + "(?=.*[a-z])(?=.*[A-Z])"
+      + "(?=.*[@#$%^&+=])"
+      + "(?=\\S+$).{8,20}$";
 
-    if(password.matches("")) {
+    if (password.matches("")) {
       etPassword.setBackgroundResource(R.drawable.input_field_error);
       etPassword.setError("This field cannot be blank");
       return false;
-    } else if(!password.matches(passwordPattern)){
+    } else if (!password.matches(passwordPattern)) {
       etPassword.setBackgroundResource(R.drawable.input_field_error);
       etPassword.setError("Password is too weak");
       return false;
@@ -166,31 +197,31 @@ public class SignUpActivity extends AppCompatActivity {
     }
   }
 
-  private boolean validatePassword2(){
+  private boolean validatePassword2() {
     //cek password
-    Log.i("password",password);
-    Log.i("password2",password2);
+    Log.i("password", password);
+    Log.i("password2", password2);
 
-    if(password2.matches("")) {
+    if (password2.matches("")) {
       etPassword2.setBackgroundResource(R.drawable.input_field_error);
       etPassword2.setError("This field cannot be blank");
       return false;
-    } else if(!password2.equals(password)){
+    } else if (!password2.equals(password)) {
       etPassword2.setBackgroundResource(R.drawable.input_field_error);
       etPassword2.setError("Password not same");
       return false;
-    }else {
+    } else {
       etPassword2.setBackgroundResource(R.drawable.input_field);
       return true;
     }
   }
 
-  private boolean validatePhoneNumber(){
-    if(phoneNumber.matches("")) {
+  private boolean validatePhoneNumber() {
+    if (phoneNumber.matches("")) {
       etPhone.setBackgroundResource(R.drawable.input_field_error);
       etPhone.setError("This field cannot be blank");
       return false;
-    }else {
+    } else {
       etPhone.setBackgroundResource(R.drawable.input_field);
 
       //concat phone number and code country

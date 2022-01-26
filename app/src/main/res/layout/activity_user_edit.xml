@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@drawable/background_user_profile"
+  android:orientation="vertical"
+  tools:context=".UserEditActivity">
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="215dp"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="-10dp">
+
+      <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/icon_back"
+        android:src="@drawable/ic_icon_arrow" />
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bold"
+        android:gravity="center"
+        android:text="@string/edit_profile"
+        android:textColor="@color/white"
+        android:textSize="28sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="17dp"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+      <ImageView
+        android:layout_width="129.31dp"
+        android:layout_height="129.31dp"
+        android:layout_marginLeft="-22dp"
+        android:contentDescription="@string/profile_picture"
+        android:src="@drawable/ic_profile_image" />
+
+      <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+          android:id="@+id/fullName"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="-5dp"
+          android:fontFamily="@font/bold"
+          android:gravity="left"
+          android:text="@string/fullname"
+          android:textColor="@color/white"
+          android:textSize="25sp" />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/bold"
+          android:gravity="left"
+          android:text="@string/platinum_member"
+          android:textColor="@color/gray"
+          android:textSize="19sp" />
+
+      </LinearLayout>
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/frag_user_profile"
+    android:orientation="vertical">
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="40dp">
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/fullname"
+          android:fontFamily="@font/bold"
+          android:textSize="20sp"
+          android:textColor="@color/black_bg"
+          android:layout_marginBottom="5dp"
+          android:layout_marginTop="30dp"/>
+
+        <EditText
+          android:id="@+id/et_full_name"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:autofillHints="full name"
+          android:background="@drawable/input_field_edit"
+          android:fontFamily="@font/regular"
+          android:hint="@string/fullname"
+          android:inputType="text"
+          android:textSize="20sp"
+          android:minHeight="45dp"
+          android:textColor="@color/black_bg"
+          android:textColorHint="@color/black_bg" />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/email"
+          android:fontFamily="@font/bold"
+          android:textSize="20sp"
+          android:textColor="@color/black_bg"
+          android:layout_marginBottom="5dp"
+          android:layout_marginTop="20dp"/>
+
+        <EditText
+          android:id="@+id/et_email"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:autofillHints="emailAddress"
+          android:background="@drawable/input_field_edit"
+          android:fontFamily="@font/regular"
+          android:hint="@string/email"
+          android:inputType="textEmailAddress"
+          android:textSize="20sp"
+          android:minHeight="45dp"
+          android:textColor="@color/black_bg"
+          android:textColorHint="@color/black_bg" />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/password"
+          android:fontFamily="@font/bold"
+          android:textSize="20sp"
+          android:textColor="@color/black_bg"
+          android:layout_marginBottom="5dp"
+          android:layout_marginTop="20dp"/>
+
+        <EditText
+          android:id="@+id/et_password"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:autofillHints="password"
+          android:background="@drawable/input_field_edit"
+          android:fontFamily="@font/regular"
+          android:hint="@string/password"
+          android:inputType="textPassword"
+          android:textSize="20sp"
+          android:minHeight="45dp"
+          android:textColor="@color/black_bg"
+          android:textColorHint="@color/black_bg" />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="@string/phone_number"
+          android:fontFamily="@font/bold"
+          android:textSize="20sp"
+          android:textColor="@color/black_bg"
+          android:layout_marginBottom="5dp"
+          android:layout_marginTop="20dp"/>
+
+        <EditText
+          android:id="@+id/et_phone_number"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:autofillHints="phone number"
+          android:background="@drawable/input_field_edit"
+          android:fontFamily="@font/regular"
+          android:hint="@string/username"
+          android:inputType="text"
+          android:textSize="20sp"
+          android:minHeight="45dp"
+          android:textColor="@color/black_bg"
+          android:textColorHint="@color/black_bg" />
+
+        <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/btn_login"
+          android:layout_width="140dp"
+          android:layout_height="wrap_content"
+          android:background="@drawable/button"
+          android:fontFamily="@font/bold"
+          android:text="@string/update"
+          android:textAllCaps="false"
+          android:textSize="24sp"
+          android:textStyle="bold"
+          android:layout_marginTop="20dp"/>
+
+      </LinearLayout>
+
+
+    </ScrollView>
+
+  </LinearLayout>
+
+</LinearLayout>

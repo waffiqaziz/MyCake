@@ -1,112 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
   android:background="@drawable/background_user_profile"
+  android:orientation="vertical"
   tools:context=".UserProfileActivity">
 
   <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="255dp"
     android:orientation="vertical"
-    tools:ignore="UselessParent">
+    android:padding="20dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
-      android:layout_height="255dp"
-      android:orientation="vertical"
-      android:padding="20dp">
-
-      <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="-10dp"
-        android:orientation="horizontal">
-
-        <ImageView
-          android:id="@+id/imageView"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:contentDescription="@string/icon_back"
-          android:src="@drawable/ic_icon_arrow"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintTop_toTopOf="parent"
-          tools:ignore="MissingConstraints" />
-
-        <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:fontFamily="@font/bold"
-          android:gravity="center"
-          android:text="@string/my_profile"
-          android:textColor="@color/white"
-          android:textSize="28sp"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toStartOf="@+id/logOut"
-          app:layout_constraintStart_toEndOf="@+id/imageView"
-          app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-          android:id="@+id/logOut"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:contentDescription="@string/icon_log_out"
-          android:src="@drawable/ic_icon_logout"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
-
-      </androidx.constraintlayout.widget.ConstraintLayout>
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="-10dp"
+      android:orientation="horizontal">
 
       <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="129.31dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="-10dp"
-        android:contentDescription="@string/profile_picture"
-        android:src="@drawable/ic_profile_image" />
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/icon_back"
+        android:src="@drawable/ic_icon_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
       <TextView
-        android:id="@+id/fullName"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="-10dp"
         android:fontFamily="@font/bold"
         android:gravity="center"
-        android:text=""
+        android:text="@string/my_profile"
         android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/logOut"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
 
-      <TextView
-        android:layout_width="match_parent"
+      <ImageView
+        android:id="@+id/logOut"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/bold"
-        android:gravity="center"
-        android:text="@string/platinum_member"
-        android:textColor="@color/gray"
-        android:textSize="20sp" />
-    </LinearLayout>
+        android:contentDescription="@string/icon_log_out"
+        android:src="@drawable/ic_icon_logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-      android:layout_width="wrap_content"
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="129.31dp"
+      android:layout_gravity="center"
+      android:layout_marginTop="17dp"
+      android:layout_marginBottom="-10dp"
+      android:contentDescription="@string/profile_picture"
+      android:src="@drawable/ic_profile_image" />
+
+    <TextView
+      android:id="@+id/fullName"
+      android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginLeft="5dp"
-      android:layout_marginRight="5dp"
-      android:background="@drawable/frag_user_profile">
+      android:layout_marginBottom="-5dp"
+      android:fontFamily="@font/bold"
+      android:gravity="center"
+      android:text=""
+      android:textColor="@color/white"
+      android:textSize="25sp" />
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:fontFamily="@font/bold"
+      android:gravity="center"
+      android:text="@string/platinum_member"
+      android:textColor="@color/gray"
+      android:textSize="19sp" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@drawable/frag_user_profile"
+    android:orientation="vertical">
+
+    <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
       <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="40dp">
 
-        <!-- Menu Profile -->
         <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="25dp"
+          android:layout_marginTop="10dp"
+          android:layout_marginRight="25dp"
+          android:layout_marginBottom="20dp">
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon_package" />
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_icon_truck" />
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_icon_home" />
+
+        </RelativeLayout>
+
+        <!-- Menu Profile -->
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="15dp"
+          android:contentDescription="@string/divider"
+          android:src="@drawable/ic_line" />
+
+        <RelativeLayout
+          android:id="@+id/btn_edit_profile"
           android:layout_width="match_parent"
           android:layout_height="wrap_content">
 
@@ -144,12 +179,13 @@
         <ImageView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="20dp"
-          android:layout_marginBottom="20dp"
+          android:layout_marginTop="15dp"
+          android:layout_marginBottom="15dp"
           android:contentDescription="@string/divider"
           android:src="@drawable/ic_line" />
 
         <RelativeLayout
+          android:id="@+id/btn_wishlist"
           android:layout_width="match_parent"
           android:layout_height="wrap_content">
 
@@ -187,8 +223,8 @@
         <ImageView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="20dp"
-          android:layout_marginBottom="20dp"
+          android:layout_marginTop="15dp"
+          android:layout_marginBottom="15dp"
           android:contentDescription="@string/divider"
           android:src="@drawable/ic_line" />
 
@@ -230,8 +266,8 @@
         <ImageView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="20dp"
-          android:layout_marginBottom="20dp"
+          android:layout_marginTop="15dp"
+          android:layout_marginBottom="15dp"
           android:contentDescription="@string/divider"
           android:src="@drawable/ic_line" />
 
@@ -273,8 +309,8 @@
         <ImageView
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_marginTop="20dp"
-          android:layout_marginBottom="20dp"
+          android:layout_marginTop="15dp"
+          android:layout_marginBottom="15dp"
           android:contentDescription="@string/divider"
           android:src="@drawable/ic_line" />
 
@@ -313,10 +349,59 @@
             android:src="@drawable/ic_icon_angle" />
         </RelativeLayout>
 
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="15dp"
+          android:layout_marginBottom="25dp"
+          android:contentDescription="@string/divider"
+          android:src="@drawable/ic_line" />
+
+        <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="25dp"
+          android:layout_marginRight="25dp">
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/home_menu"
+            android:src="@drawable/ic_icon_home_fill" />
+
+          <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:src="@drawable/ic_icon_profile" />
+
+            <View
+              android:layout_width="50dp"
+              android:layout_height="4dp"
+              android:layout_marginTop="3dp"
+              android:background="@color/black_bg" />
+
+          </LinearLayout>
+
+          <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@string/message"
+            android:src="@drawable/ic_icon_message" />
+
+        </RelativeLayout>
       </LinearLayout>
 
-    </LinearLayout>
+
+    </ScrollView>
+
   </LinearLayout>
 
-
-</RelativeLayout>
+</LinearLayout>
