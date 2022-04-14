@@ -4,9 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/button.xml" value="0.2078125" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_icon_angle.xml" value="0.16486486486486487" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_icon_arrow.xml" value="0.16486486486486487" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_icon_profile.xml" value="0.18153153153153154" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_icon_settings.xml" value="0.18153153153153154" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_icon_truck.xml" value="0.13963963963963963" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_icon_user_black.xml" value="0.16306306306306306" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_profile_image.xml" value="0.18153153153153154" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/ic_profile_picture.xml" value="0.22552083333333334" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/drawable/input_field.xml" value="0.2078125" />
@@ -21,7 +24,7 @@
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_user_edit.xml" value="0.18" />
-        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_user_profile.xml" value="0.33" />
+        <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_user_profile.xml" value="0.25" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/layout/activity_welcome.xml" value="0.1" />
         <entry key="..\:/pem/AndroidStudio/001/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19504504504504505" />
       </map>
